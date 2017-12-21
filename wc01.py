@@ -5,7 +5,8 @@ from pyspark import SparkContext
 sc = SparkContext(appName="PythonStreamingDirectKafkaWordCount")
 sc.setLogLevel("WARN")
 
-file_in = sc.textFile('wc01.py')
+#file_in = sc.textFile('wc01.py')
+file_in = sc.textFile('hdfs://192.168.206.226:9746/user/wc01.py')
 print('number of lines in file: %s' % file_in.count())
 
 chars = file_in.map(lambda s: len(s)).reduce(add)
