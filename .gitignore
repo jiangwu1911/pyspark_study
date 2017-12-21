@@ -103,3 +103,5 @@ ENV/
 *.txt
 packages
 *.swp
+*.csv
+*.zip

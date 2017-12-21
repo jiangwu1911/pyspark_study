@@ -30,7 +30,7 @@ def print_distinct(df, column):
 sc = SparkContext(appName="spark_sql_test")
 sc.setLogLevel("WARN")
 
-csv_in = "054155548015-aws-billing-csv-2016-03.csv"
+csv_in = "data/054155548015-aws-billing-csv-2016-03.csv"
 
 sqlContext = SQLContext(sc)
 spdf_in = sqlContext.read.format('com.databricks.spark.csv')\
